@@ -1,18 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context=".MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/billInputTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/TXT_Bill_Title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/billEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0"
+            android:hint="@string/TXT_Bill_Hint_Text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/billInputTitle" />
+
+        <TextView
+            android:id="@+id/tipPercentageTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/TXT_Tip_Title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/billEditText" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            app:layout_constraintEnd_toStartOf="@id/tipPercentageTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercentageTitleTextView" />
+
+
+        <TextView
+            android:id="@+id/tipPercentageTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="15%"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@id/plusButton"
+            app:layout_constraintStart_toEndOf="@+id/minusButton"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercentageTitleTextView"
+            app:layout_constraintBottom_toBottomOf="@id/minusButton"/>
+
+        <Button
+            android:id="@+id/plusButton"
+            android:layout_width="44dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tipPercentageTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercentageTitleTextView" />
+
+        <TextView
+            android:id="@+id/tipTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/TXT_Tip_Result_Title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@id/tipValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipPercentageTextView" />
+
+        <TextView
+            android:id="@+id/tipValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tipTitleTextView"
+            app:layout_constraintTop_toTopOf="@+id/tipTitleTextView" />
+
+        <TextView
+            android:id="@+id/totalTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/TXT_Total_Amount_Title"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/totalValueTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipTitleTextView" />
+
+        <TextView
+            android:id="@+id/totalValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tipTitleTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

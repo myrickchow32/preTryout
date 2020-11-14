@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PreTryout</string>
+    <string name="TXT_Bill_Title">賑單</string>
+    <string name="TXT_Bill_Hint_Text">(請輸入你的賑單)</string>
+    <string name="TXT_Tip_Title">貼士 %</string>
+    <string name="TXT_Tip_Result_Title">貼士</string>
+    <string name="TXT_Total_Amount_Title">總數</string>
+</resources>

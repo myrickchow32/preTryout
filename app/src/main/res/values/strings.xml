@@ -1,3 +1,8 @@
 <resources>
   <string name="app_name">PreTryout</string>
+  <string name="TXT_Bill_Title">Bill</string>
+  <string name="TXT_Bill_Hint_Text">(Enter your bill)</string>
+  <string name="TXT_Tip_Title">Tip %</string>
+  <string name="TXT_Tip_Result_Title">Tip</string>
+  <string name="TXT_Total_Amount_Title">Total</string>
 </resources>
